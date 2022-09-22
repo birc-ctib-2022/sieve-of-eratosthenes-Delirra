@@ -21,9 +21,10 @@ def sieve(n: int) -> list[int]:
             continue
 
         tag = candidates[i]
-        for j in range(i + tag, n - 2, tag):
+        for j in range(i + tag, n - 1, tag):
             candidates[j] = None
 
     primes = [idx for idx in candidates if idx != None]
 
     return primes
+print(sieve(15))
