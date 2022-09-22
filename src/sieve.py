@@ -16,7 +16,7 @@ def sieve(n: int) -> list[int]:
     primes = []
     # FIXME: fill out this bit
 
-    for i in range(n - 2):
+    for i in range(n - 1):
         if candidates[i] == None:
             continue
 
@@ -27,4 +27,4 @@ def sieve(n: int) -> list[int]:
     primes = [idx for idx in candidates if idx != None]
 
     return primes
-print(sieve(15))
+print(sieve(432))
